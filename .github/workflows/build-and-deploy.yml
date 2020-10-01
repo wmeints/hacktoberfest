@@ -41,3 +41,4 @@ jobs:
         app-name: wa-hacktoberfest-weu
         publish-profile: ${{ secrets.PUBLISHPROFILE }}
         package: ./publish
+        slot-name: staging
