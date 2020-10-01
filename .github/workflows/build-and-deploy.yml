@@ -18,6 +18,15 @@ jobs:
       with:
         dotnet-version: 3.1.402
 
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Restore NPM packages
+      run: npm install
+      working-directory: ./src
+
     - name: Restore packages
       run: dotnet restore
       working-directory: ./src
