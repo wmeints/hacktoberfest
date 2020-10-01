@@ -1,0 +1,34 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Build and deploy web app
+    steps:
+    - name: Check out sources
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.402
+
+    - name: Restore packages
+      run: dotnet Restore
+      working-directory: ./src
+
+    - name: Publish website
+      run: dotnet publish -c Release --no-restore -o ../publish
+      working-directory: ./src
+
+    - name: Deploy website to Azure
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: wa-hacktoberfest-weu
+        publish-profile: {{secrets.PUBLISHPROFILE}}
+        package: ./publish
