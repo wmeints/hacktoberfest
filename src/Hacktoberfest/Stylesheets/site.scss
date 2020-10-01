@@ -1,1 +1,8 @@
-body { }
+$primary: #434231;
+$body-bg: #faf5ef;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.logo-container {
+    margin-top: 2rem;
+}
