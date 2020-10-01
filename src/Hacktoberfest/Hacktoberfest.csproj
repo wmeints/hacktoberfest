@@ -3,5 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  <Target Name="RunGulpTasks" BeforeTargets="Publish">
+    <Exec Command="npm install" Condition="!Exists('node_modules')"/>
+    <Exec Command="npm run build"/>
+  </Target>
 </Project>
