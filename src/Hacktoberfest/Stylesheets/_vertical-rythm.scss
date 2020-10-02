@@ -1,0 +1,178 @@
+/*
+// Vertical Rhythm
+// -------------------------------------------------- */
+ 
+ /* TYPOGRAPHY BASE
+  * -------------------------------------------
+  * First, we establish a baseline to normalize typography.
+  * Credit: this BASE section is based on Twitter Bootstrap's type.less
+  * but with everything that isn't related to rhythm removed.
+  */
+ 
+ /* Lists
+  * -------------------------------------------
+  */
+ 
+ // Unordered and Ordered lists
+ ul, ol {
+   padding: 0;
+   margin: 0 0 ($line-height-base / 2) 25px;
+ }
+ ul ul,
+ ul ol,
+ ol ol,
+ ol ul {
+   margin-bottom: 0;
+ }
+ li {
+   line-height: $line-height-base;
+ }
+ 
+ // Description Lists
+ dl {
+   margin-bottom: $line-height-base;
+ }
+ dt, dd {
+   line-height: $line-height-base;
+ }
+ dd {
+   margin-left: ($line-height-base / 2);
+ }
+ 
+ 
+ // MISC
+ // ----
+ 
+ // Horizontal rules
+ hr {
+   margin: $line-height-base 0;
+   border: 0;
+   border-top: 1px solid $hr-border-width;
+   border-bottom: 1px solid #fff;
+ }
+ 
+ 
+ 
+ /* VERTICAL RHYTHM
+  * -------------------------------------------
+  * Add .rhythm to parent elements when you
+  * wish to apply vertical rhythm to child elements
+  */
+ 
+ 
+ /* Body text & Misc
+  * -------------------------------------------
+  */
+ 
+ .rhythm {
+   p, ul, ol, blockquote, address, pre, form {
+     margin-bottom: $line-height-base;
+ 
+     // And remove margin from last element
+     &:last-child {
+       margin-bottom: 0;
+     }
+   }
+ }
+ 
+ 
+ 
+ /* Headings & paragraphs
+  * -------------------------------------------
+  * Here we apply special spacing to certain
+  * typographical patterns. It is impossible to
+  * predict the patterns you require for your
+  * project, so this is only a starting point.
+  */
+ 
+ .rhythm {
+   h1, h2, h3 {
+     margin-bottom: ($line-height-base / 4);
+   }
+   h1 + h2 {
+     margin-top: $line-height-base;
+   }
+   h4 {
+     margin-bottom: ($line-height-base / 6);
+   }
+   h1 + p,
+   p + h4 {
+     margin-top: ($line-height-base * 1.5);
+   }
+   h2 + h3,
+   h2 + h4 {
+     margin-top: $line-height-base;
+   }
+   h2 + p,
+   h3 + p {
+     margin-top: ($line-height-base / 2);
+   }
+   p + h2 {
+     margin-top: ($line-height-base * 3);
+   }
+   h3 + h4 {
+     margin-top: ($line-height-base * 2);
+   }
+ }
+ 
+ /* Lists
+  * -------------------------------------------
+  * Special classes for numbered, bulleted,
+  * and alpha lists.
+  */
+ 
+ .rhythm {
+ 
+   //
+   h3 + ul.bullet-list,
+   h3 + ul.numbered-list,
+   h3 + ul.alpha-list,
+   h3 + ol.numbered-list {
+     margin-top: ($line-height-base / 2);
+   }
+ 
+ 
+   ul.bullet-list + h3,
+   ul.numbered-list + h3,
+   ul.alpha-list + h3 {
+     margin-top: ($line-height-base * 2);
+   }
+   h4 + ul.bullet-list,
+   h4 + ul.numbered-list,
+   h4 + ul.alpha-list,
+   h4 + ol.numbered-list {
+     margin-top: ($line-height-base / 2);
+   }
+   .bullet-list {
+     list-style-type: disc; // bullets
+     padding-left: 1.25em;
+   }
+   .numbered-list {
+     list-style-type: decimal; // numbers
+     padding-left: 1.5em;
+   }
+   .alpha-list {
+     list-style-type: lower-alpha; // letters
+     padding-left: 1.5em;
+   }
+   .bullet-list li,
+   .numbered-list li,
+   .alpha-list li {
+     margin-bottom: ($line-height-base / 2);
+   }
+   .condensed-list li {
+     margin-bottom: 0;
+   }
+   .flush-list li {
+     padding-left: 0;
+   }
+ }
+ 
+ 
+ /* Blockquotes
+  * -------------------------------------------
+  */
+ 
+ .rhythm blockquote {
+   padding: $line-height-base $line-height-base 0;
+ }

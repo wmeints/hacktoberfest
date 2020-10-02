@@ -1,26 +1,68 @@
 @page "/"
+@{
+    ViewBag.Title = "Home";
+}
+<div class="container nav-container">
+    <div class="row justify-content-right">
+        <div class="col">
+            <ul class="nav ml-auto">
+                <li class="nav-item"><a href="~/" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="~/code-of-conduct" class="nav-link">Code of conduct</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <div class="container logo-container">
     <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-6">
             <img class="img-fluid" src="/images/logo.png" alt="Info Support Hacktober Fest">
         </div>
     </div>
-</div>
-
-<div class="container">
     <div class="row">
         <div class="col">
-            <h1>Join us live on October 23, and October 24!</h1>
-            <p>We'll be working on fixing bugs in some of our favorite open source projects. Best of all, we'll be streaming our work live from Youtube!</p>
+            <h1 class="text-center">23 Oct - 24 Oct</h1>
+            <h2 class="text-center">Join us or watch us on Youtube!</h2>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container projects-container">
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="text-center">Projects we support</h2>
+        </div>
+    </div>
     <div class="row">
         <div class="col">
-            <h2>This event is organized by these open source fanatics</h2>
+            <div class="card-deck mb-2">
+                <div class="card">
+                    <img src="/images/logo-dapr.png" alt="Dapr" class="border-bottom card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://dapr.io/">Dapr</a></h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/logo-maven.png" alt="Maven" class="border-bottom card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://maven.apache.org">Maven</a></h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/logo-stryker.png" alt="Stryker mutation testing" class="border-bottom card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://stryker-mutator.io/">Stryker</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="text-center">This event is organized by these open source fanatics</h2>
         </div>
     </div>
     <div class="row">
@@ -29,40 +71,48 @@
                 <div class="card">
                     <img src="/images/edwin-van-wijk.jpg" alt="Edwin van Wijk" class="card-img-top">
                     <div class="card-body">
-                        <div class="card-title">Edwin van Wijk</div>
+                        <h5 class="card-title">Edwin van Wijk</h5>
                         <div class="card-text">Principal Architect, DAPR Expert</div>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/maarten-mulders.jpg" alt="Maarten Mulders" class="card-img-top">
                     <div class="card-body">
-                        <div class="card-title">Maarten Mulders</div>
+                        <h5 class="card-title">Maarten Mulders</h5>
                         <div class="card-text">Software Architect, Maven maintainer</div>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/martin-kanters.png" alt="Martin Kanters" class="card-img-top">
                     <div class="card-body">
-                        <div class="card-title">Martin Kanters</div>
-                        <div class="card-text">Lead Developer, Maven maintainer</div>
+                        <h5 class="card-title">Martin Kanters</h5>
+                        <div class="card-text">Senior Software Engineer, Maven maintainer</div>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/nico-jansen.jpg" alt="Nico Jansen" class="card-img-top">
                     <div class="card-body">
-                        <div class="card-title">Nico Jansen</div>
+                        <h5 class="card-title">Nico Jansen</h5>
                         <div class="card-text">Software Architect, Stryker maintainer</div>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/willem-meints.png" alt="Willem Meints" class="card-img-top">
                     <div class="card-body">
-                        <div class="card-title">Willem Meints</div>
+                        <h5 class="card-title">Willem Meints</h5>
                         <div class="card-text">Technology Advocate, Deep Learning Expert</div>
                     </div>
                 </div>
                 
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container footer-container">
+    <div class="row">
+        <div class="col">
+            <small>Copyright Info Support 2020.</small>
         </div>
     </div>
 </div>

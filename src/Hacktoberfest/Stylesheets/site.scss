@@ -1,8 +1,63 @@
-$primary: #434231;
-$body-bg: #faf5ef;
+/*
+// Variable overrides for Bootstrap 
+// -------------------------------------------------------------------------- */
 
+$primary: #005248;
+$body-bg: #FFFFFF;
+$headings-color: #005248;
+
+$line-height-base: 1.65;
+
+$font-size-base: 1.125rem;
+$h1-font-size: 3.052rem;
+$h2-font-size: 2.331rem;
+$h3-font-size: 1.953rem;
+$h4-font-size: 1.563rem;
+$h5-font-size: 1rem;
+$h6-font-size: 0.8rem;
+
+$font-family-sans-serif: 'Abel', sans-serif;
+$headings-font-family: 'Ubuntu', sans-serif;
+
+
+/*
+// Imports used in the application styling
+// -------------------------------------------------------------------------- */
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "vertical-rythm";
 
+
+/*
+// Custom styles for the website
+// -------------------------------------------------------------------------- */
 .logo-container {
+    margin-top: 2rem; // 32px
+    margin-bottom: 10rem;
+}
+
+.nav-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.site-navigation {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.projects-container {
+    margin-bottom: 8rem;
+}
+
+.footer-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-container {
     margin-top: 2rem;
+}
+
+.nav-logo {
+    height: 30px;
 }
